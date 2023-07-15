@@ -31,6 +31,8 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->get('/api/soal2/(:alphanum)','Soal12::soal2/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
