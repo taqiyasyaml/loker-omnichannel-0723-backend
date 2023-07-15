@@ -33,7 +33,7 @@ $routes->get('/', 'Home::index');
 
 $routes->get('/api/soal1', 'Soal12::soal1');
 $routes->get('/api/soal2/(:alphanum)','Soal12::soal2/$1');
-
+$routes->post('/api/soal3', 'Pesanan::create');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
