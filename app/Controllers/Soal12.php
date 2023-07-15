@@ -20,7 +20,7 @@ class Soal12 extends BaseController
         else {
             try {
                 $json_data = json_decode($res->getBody(), true, 512, JSON_THROW_ON_ERROR);
-                return $this->response->setJSON($json_data);
+                return $this->response->setStatusCode($res_http_code)->setJSON($json_data);
             } catch (\Throwable $th) {
                 return $this->response->setStatusCode(500);
             }
